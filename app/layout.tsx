@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
         version: minikitConfig.miniapp.version,
         imageUrl: minikitConfig.miniapp.heroImageUrl,
         button: {
-          title: `Join the ${minikitConfig.miniapp.name} Waitlist`,
+          title: `Play ${minikitConfig.miniapp.name}`,  // عدلت هنا
           action: {
             name: `Launch ${minikitConfig.miniapp.name}`,
             type: "launch_frame",
@@ -40,11 +40,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${sourceCodePro.variable}`}>
-        <RootProvider>
-          {children}
-        </RootProvider>
+    <html 
+      lang="en" 
+      className={`${inter.variable} ${sourceCodePro.variable}`}
+      style={{ margin: 0, padding: 0, overflow: 'hidden' }}  // زدت هنا
+    >
+      <body style={{ margin: 0, padding: 0, overflow: 'hidden' }}>  {/* زدت هنا */}
+        <RootProvider>{children}</RootProvider>
       </body>
     </html>
   );
