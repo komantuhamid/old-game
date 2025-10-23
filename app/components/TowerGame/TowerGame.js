@@ -7,8 +7,7 @@ export default function TowerGame() {
       height: '100vh',
       margin: 0,
       padding: 0,
-      overflow: 'hidden',
-      position: 'relative'
+      overflow: 'hidden'
     }}>
       <iframe 
         src="/tower-game/index.html"
@@ -16,14 +15,11 @@ export default function TowerGame() {
           width: '100%',
           height: '100%',
           border: 'none',
-          display: 'block',
-          position: 'absolute',
-          top: 0,
-          left: 0
+          display: 'block'
         }}
         title="Tower Game"
+        sandbox="allow-scripts allow-same-origin allow-popups"
         allow="autoplay; fullscreen"
-        loading="eager"
       />
     </div>
   )
